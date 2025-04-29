@@ -6,16 +6,16 @@
 #include <atomic>
 #include <string>
 
-// Простая структура для представления цвета пикселя
+// простая структура для представления цвета пикселя
 struct Color {
-    unsigned char r, g, b;
+    unsigned char r, g, b; // красный, зелёный, синий каналы
     
     Color() : r(0), g(0), b(0) {}
     Color(unsigned char r, unsigned char g, unsigned char b) : r(r), g(g), b(b) {}
 };
 
 // Тип для представления изображения
-using Image = std::vector<std::vector<Color>>;
+using Image = std::vector<std::vector<Color>>; // цвет пикселя в координатах 
 
 // Функции для работы с изображениями
 Image loadImage(const std::string& filename, int& width, int& height);
